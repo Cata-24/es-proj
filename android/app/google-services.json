@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "202435635871",
+    "firebase_url": "https://es-firebase-proj-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "es-firebase-proj",
+    "storage_bucket": "es-firebase-proj.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202435635871:android:e49c0ff4e14a76bfe510aa",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBn_M4USXj9zdkDnfvsEzk3d8AmIEuZEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

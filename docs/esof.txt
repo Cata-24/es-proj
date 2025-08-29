@@ -1,0 +1,134 @@
+1- As a registered user, I want to search recipes so that I can cook with the ingredients I have.
+2- As a registered user, I want to manage privately or public (create and save) recipes so that I can remember them later.
+3- As a registered user, I want to add and consume my ingredients (name,expiration date, count, cost) so that I know what I have.
+4- As a registered user, I want to be notified when the ingredients are about to expire so that I can manage the stock easier.
+5- As a registered user, I want create a link and share recipes so that people can access them as well.
+6- As a registered user, I want to see other people's recipes so that I can get inspiration.
+7- As a registered user, I want to rate other people's recipes so that they know I liked it.
+
+
+Login Test 
+GIVEN user on the login screen
+WHEN user inserts the correct credentials and presses confirm button
+THEN they should be redirected to their pantry
+
+GIVEN user on the login screen
+WHEN user inserts incorrect / empty credentials and presses confirm
+THEN an error message displays
+
+GIVEN user on the login screen
+WHEN user presses register button
+THEN they should be redirected to the register screen 
+
+GIVEN user on the register screen
+WHEN user inserts registered credentials and presses confirm
+THEN the error message displays
+
+GIVEN user on the registe screen
+WHEN user inserts empty credentials and presses confirm
+THEN an error message displays
+
+1- Test 1 - Ingredient info 
+GIVEN the user is on the pantry screen 
+WHEN chose an ingredient
+THEN the info screen pops up
+
+Test 2 - Search recipes by ingredient
+GIVEN the user is on ingredient's info screen
+WHEN they press the search button
+THEN they should be redirected to recipes with the ingredient
+
+2- Test 1 - Create recipe
+GIVEN user is on the recipe screen
+WHEN user presses "create recipe"
+THEN the screen to create a recipe pops up
+
+Test 2 - Save recipe
+GIVEN user is on create recipe screen
+WHEN user inserted all the info and press "Save"
+THEN recipe is saved
+
+Test 3 - See recipe
+GIVEN user is on the recipe screen
+WHEN they press a recipe
+THEN the recipe shows up
+
+Test 4 - Edit recipe
+GIVEN user is on the recipe screen
+WHEN user presses edit recipe button
+THEN user is able to change recipe attributes
+
+Test 5 - Missing field
+GIVEN user is on create recipe screen
+WHEN user didn't insert the values of at least 1 field and press "Save"
+THEN error displays
+
+3- Test 1 - Add ingredient
+GIVEN user is on the pantry screen
+WHEN they press "add ingredient"
+THEN the screen to chose an ingredient shows up
+
+Test 2 - Remove ingredient
+GIVEN user is on the ingredient's info screen
+WHEN they press the "remove" button
+THEN the ingredient is no longer on their pantry
+
+Test 3 - Change ingredient
+GIVEN user is on the ingredient's info screen
+WHEN they change the value of an attribute and confirm
+THEN that information about their ingredient is saved
+
+Test 4 - Save ingredient
+GIVEN user is on the add ingredient screen
+WHEN they insert all the fields and press confirm buttton
+THEN the ingredient is added to their pantry
+
+Test 5 - Save ingredient error
+GIVEN user is on the add ingredient screen
+WHEN they didn't insert all the fields and press confirm buttton
+THEN error message displays
+
+4- Test 1 - Expire notification
+GIVEN ingredient is saved in the pantry
+WHEN ingredient is about to expire
+THEN user is notified with a message
+
+5- Test 1 - Create recipe link
+GIVEN the user is on the recipe screen
+WHEN they press the "share" button
+THEN a link to their recipe displays
+
+Test 2 - Acess recipe link
+GIVEN user created a recipe share link
+WHEN they enter the link
+THEN they're redirected to that recipe's information screen
+
+6 - Test 1 - Access recommended recipes
+GIVEN user is on the app
+WHEN user goes to recipe screen
+THEN recommended recipes appear
+
+Test 2 - Search recipe
+GIVEN user is on the recipe screen
+WHEN they type on the search bar
+THEN recipes that have those words are displayed instead of the recommended ones
+
+Test 3 - Search recipe by ingredient
+GIVEN user is on the recipe screen
+WHEN they press "search by ingredient"
+THEN the screen to chose an ingredient shows up
+
+7 - Test 1 - Rate recipes
+GIVEN user is on recipe info
+WHEN user presses the heart button
+THEN recipe receives a like and is saved to user’s saved recipes
+
+Test 2 - Notification for like
+GIVEN user 1 has a public recipe
+WHEN user 2 likes user 1 recipe
+THEN user 1 gets a notification
+
+Test 3 - Spam notification prevention
+GIVEN user 1 has a public recipe
+WHEN user 2 likes and removes the like more than once from user 1 recipe
+THEN user 1 only gets 1 notification
